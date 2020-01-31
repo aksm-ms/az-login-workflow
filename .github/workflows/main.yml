@@ -15,4 +15,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         
     - run: |
-        az webapp list --subscription c94bda7a-0577-4374-9c53-0e46a9fb0f70
+        az account list

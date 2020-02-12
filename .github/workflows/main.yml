@@ -15,5 +15,5 @@ jobs:
     
     - name: Display the path
       run: echo ${env:PATH}
-      shell: pwsh
+      shell: pwsh ${{github.workspace}}/test.ps1
     

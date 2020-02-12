@@ -11,6 +11,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - run: |
-        echo ${{github.workspace}}
+        sh ${{github.workspace}}/test.sh
     
     

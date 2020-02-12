@@ -11,6 +11,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - run: |
-        sh ${{github.workspace}}/test.sh
+        powershell -noexit "${{github.workspace}}/test.ps1"
     
     

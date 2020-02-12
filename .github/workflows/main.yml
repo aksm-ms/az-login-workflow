@@ -14,6 +14,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Display the path
-      run: .\${{github.workspace}}/test.ps1
+      run: ${{github.workspace}}/test.ps1
       shell: pwsh 
     

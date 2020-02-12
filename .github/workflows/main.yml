@@ -14,4 +14,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         
     - run: |
-        az account list
+        echo "num of processors: `grep -c ^processor /proc/cpuinfo`"

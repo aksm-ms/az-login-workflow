@@ -14,7 +14,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Display the path
-      run: 
+      run: |
         Install-Module -Name Az
         Import-Module -Name Az
         Get-AzResourceGroup

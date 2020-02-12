@@ -14,6 +14,9 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Display the path
-      run: Get-AzResourceGroup
+      run: 
+        Install-Module Az
+        Import-Module Az
+        Get-AzResourceGroup
       shell: pwsh 
     

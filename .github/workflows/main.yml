@@ -15,8 +15,8 @@ jobs:
     
     - name: Display the path
       run: 
-        Install-Module Az
-        Import-Module Az
+        Install-Module -Name Az
+        Import-Module -Name Az
         Get-AzResourceGroup
       shell: pwsh 
     

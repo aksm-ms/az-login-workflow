@@ -14,4 +14,4 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         
     - run: |
-        Get-AzResourceGroup
+        az account list

@@ -17,6 +17,7 @@ jobs:
       run: |
         Install-Module -Name Az -Force
         Import-Module -Name Az -Force
+        Connect-AzAccount -Credential ${{ secrets.AZURE_CREDENTIALS }}
         Get-AzResourceGroup
       shell: pwsh 
     

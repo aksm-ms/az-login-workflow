@@ -12,7 +12,8 @@ jobs:
       uses: Azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
-    - run: |
-        az account list
+    
+    - name: Display the path
+      run: echo ${env:PATH}
+      shell: pwsh
     

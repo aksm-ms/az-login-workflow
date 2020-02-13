@@ -8,16 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Azure Login
-      uses: Azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
     - name: Display the path
       run: |
-        Install-Module -Name Az -Force
-        Import-Module -Name Az -Force
-        Connect-AzAccount
-        Get-AzResourceGroup
-      shell: pwsh 
+        az account list
     

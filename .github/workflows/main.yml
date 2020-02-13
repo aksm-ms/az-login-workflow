@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Display the path
       run: |
-        az account list
+        az --version
     

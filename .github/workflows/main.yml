@@ -10,7 +10,9 @@ jobs:
     steps:
     - name: Display the path
       run: |
-        cd ${{github.workspace}}/az-login-workflow
-        pwd
-        ls -lrt
+        cd ${{github.workspace}}
+        echo `pwd`
+        echo `ls -lrt`
+      shell: bash
+      
     

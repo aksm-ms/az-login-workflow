@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Display the path
       run:
-        node ${{GITHUB_WORKSPACE}}/main.js
+        node ${{github.workspace}}/main.js
     

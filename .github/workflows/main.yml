@@ -9,6 +9,6 @@ jobs:
 
     steps:
     - name: Display the path
-      run: |
-        az --version
+      run: 
+        node main.js
     

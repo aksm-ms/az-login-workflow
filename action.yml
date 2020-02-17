@@ -1,0 +1,9 @@
+# Azure CLI Action
+name: 'Test Az PS action'
+description: 'automate scripts using PS.'
+branding:
+  icon: 'login.svg'
+  color: 'blue'
+runs:
+  using: 'node12'
+  main: 'main.js'

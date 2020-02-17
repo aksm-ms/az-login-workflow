@@ -9,6 +9,7 @@ jobs:
 
     steps:
     - name: Display the path
-      run: 
-        node main.js
+      runs: 
+          using: 'node'
+          main: 'main.js'
     

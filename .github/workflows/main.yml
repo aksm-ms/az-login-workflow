@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run main js
-      run:
+      run: |
+        npm install
         node ${{github.workspace}}/main.js
     

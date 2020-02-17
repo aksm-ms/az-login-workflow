@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - name: Display the path
-      run:
-        node ${{github.workspace}}/main.js
+      run: |
+        cd ${{github.workspace}}
+        pwd
+        ls -lrt
     

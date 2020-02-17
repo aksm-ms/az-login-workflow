@@ -1,4 +1,4 @@
-var utility = require('utility')
+var utility = require('./utility')
 
 console.log("Running ps script")
 utility.execSync("powershell", "${{github.workspace}}/test.ps1 -cred foo")

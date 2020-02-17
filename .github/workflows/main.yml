@@ -8,11 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Display the path
-      run: |
-        cd ${{github.workspace}}
-        echo `pwd`
-        echo `ls -lrt`
-      shell: bash
-      
+    - name: Run main js
+      run:
+        node ${{github.workspace}}/main.js
     

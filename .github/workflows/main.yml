@@ -8,9 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run main js
+    - name: checking az module
       run: |
-        npm install
-        node ${{github.workspace}}/main.js
-    
+        $module = Get-Module -Name Az.Accounts -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1
+        if (-not ([string]::IsNullOrEmpty($module)))
+        {
+          echo $module
+        } else {
+          echo "module does not exist"
+        }
+      shell:
+        pwsh

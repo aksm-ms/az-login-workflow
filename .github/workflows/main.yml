@@ -16,7 +16,7 @@ jobs:
           echo $module
         } else {
           echo "module does not exist"
-          Install-Module -Name Az -AllowClobber -Scope CurrentUser
+          Install-Module -Name Az -AllowClobber -Scope CurrentUser -Force
           $module = Get-Module -Name Az.Accounts -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1
           echo $module
         }

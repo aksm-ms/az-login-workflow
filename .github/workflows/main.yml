@@ -10,17 +10,6 @@ jobs:
     steps:
     - name: checking az module
       run: |
-        $module = Get-Module -Name Az.Accounts -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1
-        if (-not ([string]::IsNullOrEmpty($module)))
-        {
-          echo $module
-        } else {
-          echo "module does not exist"
-          Install-Module -Name Az -AllowClobber -Scope CurrentUser -Force
-          $module = Get-Module -Name Az.Accounts -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1
-          echo $module
-          Import-Module -Name $module.Path -Global -PassThru -Force
-          echo "import done"
-        }
+         Get-InstalledModule -Name "Az" 
       shell:
         pwsh
